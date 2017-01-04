@@ -31,11 +31,15 @@ gulp.task('style', function() {
 
 gulp.task('images', function() {
 	// tarea images
-return gulp.src('docs/img/*.jpeg')
+return gulp.src('docs/*.jpeg')
 	.pipe(gulp.dest('dist/'))
 	.pipe(imagemin())
-	.pipe(gulp.dest('dist/img/'));
+	.pipe(gulp.dest('dist/docs/'));
 });
 
+gulp.task('watch', function() {
+    gulp.watch('js/*.js', ['lint', 'scripts']);
+    gulp.watch('./sass/**/*.scss', ['sass']);
+});
 
 gulp.task('default', ['images', 'style', 'script']);

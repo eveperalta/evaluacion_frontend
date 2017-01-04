@@ -8,36 +8,125 @@
 	<link rel="stylesheet" href="dist/css/main.min.css">
 	<!--REQUIRED STYLE SHEETS-->
 </head>
-<body>
-	<nav class="navbar navbar-fixed-top">
-	  <div class="container-fluid">
-		<div class="navbar-header">
-      		<a class="navbar-brand" href="#"><img src="docs/logo-gris.jpg" class="img-responsive" alt=""></a>
-      	</div>
-    	<ul class="nav navbar-nav">
-      		<li class="active"><a href="#" data-toggle="tooltip" data-placement="bottom" title="La Nueva forma de moverte en la ciudad. Con carrocomp! puedes compartir tu viaje con amigos y cobrar el costo equitativamente"><span class="glyphicon glyphicon-info-sign"></span></a></li>
-    	</ul>
-  	  </div>
-	</nav>	
-<!--END NAV SECTION -->
+
+<body>   
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img src="docs/logo-gris.jpg" class="img-responsive" alt="">
+      </a>
+      <a href="#" data-toggle="tooltip" data-placement="bottom" class="info"  title="La nueva forma de moverte en la ciudad. Con carrocomp! puedes compartir tu viaje con amigos y cobrar el costo equitativamente">
+      <span class="glyphicon glyphicon-info-sign"></span>
+      </a>
+    </div>
+  </div>
+</nav><!--end-navbar-->
+ <div class="col-xs-12 col-md-12" id='map-canvas'></div>
+
+<div class="container" id='container'>
+	<div class="row">
+		<div class="col-xs-4 col-md-4" id="ruta">
+			<div class="form-group">
+      	<label for="sel1">ORIGEN</label>
+      	<select required="true" class="form-control" id="sel1">
+        	<option></option>
+        	<option>Arica</option>
+        	<option>Iquique</option>
+        	<option>Antofagasta</option>
+        	<option>Calama</option>
+        	<option>La Serena</option>
+        	<option>Valparaiso</option>
+        	<option>Santiago</option>
+        	<option>Rancagua</option>
+        	<option>Talca</option>
+        	<option>Concepción</option>
+        	<option>Temuco</option>
+        	<option>Valdivia</option>
+        	<option>Puerto Montt</option>
+        	<option>Coyhaique</option>
+        	<option>Punta Arenas</option>
+      	</select>
+			</div>
+			<div class="form-group">
+      	<label for="sel2">DESTINO</label>
+      	<select required="true" class="form-control" id="sel1">
+        	<option></option>
+        	<option>Arica</option>
+        	<option>Iquique</option>
+        	<option>Antofagasta</option>
+        	<option>Calama</option>
+        	<option>La Serena</option>
+        	<option>Valparaiso</option>
+        	<option>Santiago</option>
+        	<option>Rancagua</option>
+        	<option>Talca</option>
+        	<option>Concepción</option>
+        	<option>Temuco</option>
+        	<option>Valdivia</option>
+        	<option>Puerto Montt</option>
+        	<option>Coyhaique</option>
+        	<option>Punta Arenas</option>
+      	</select>
+			</div>
+	</div><!-- END DEL FORM GROUP ORIGEN DESTINO-->
+</div>
+
+<div class="row">
+	<div class="col-xs-4 col-md-4">
+		<button type="button" class="btn btn-lg btn-warning" id="search">buscar</button>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-4 col-md-4">
+		<h4>VEHICULO</h4>
+			<h6>seleccione</h6>
+	</div>
+</div>	
+
+
+
+
+
+</div><!--fin container con zindex-->
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-	<div id="home-sec">   
-		<div class="container-fluid">
+	<!--<div id="home-sec">   
+		<div class="container">
 		</div>
 	</div><!--END HOME SECTION-->  
-	<section id="info"  >
+	<!--<section id="info"  >
 		<div class="container">
 		</div>
 	</section><!--END ABOUT SECTION-->
-	<section id="calculator" >
+	<!--<section id="calculator" >
 		<div class="container">
 		</div>
 	</section><!--END PROJECT SECTION-->
-	<div id="footer">
+	
+
+
+
+
+	<!--<div id="footer">
 		2014 www.yourdomain.com | All Right Reserved  
 	</div><!-- END FOOTER SECTION -->
 </body>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyDjhLZdzD1Knb8c128oNAJ8cwO6lqYieu8"></script>
 <script src="src/js/custom.js"></script>
 </html>

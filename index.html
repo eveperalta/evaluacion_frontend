@@ -16,7 +16,7 @@
       <a class="navbar-brand" href="#">
         <img src="docs/logo-gris.jpg" class="img-responsive" alt="">
       </a>
-      <a href="#" data-toggle="tooltip" data-placement="bottom" class="info"  title="La nueva forma de moverte en la ciudad. Con carrocomp! puedes compartir tu viaje con amigos y cobrar el costo equitativamente">
+      <a href="#" data-toggle="tooltip" data-placement="right" class="info" title="La nueva forma de moverte en la ciudad. Con carrocomp! puedes compartir tu viaje con amigos y cobrar el costo equitativamente">
       <span class="glyphicon glyphicon-info-sign"></span>
       </a>
     </div>
@@ -26,7 +26,7 @@
 
 <div class="container" id='container'>
 	<div class="row">
-		<div class="col-xs-4 col-md-4" id="ruta">
+		<div class="col-xs-7 col-md-4" id="ruta">
 			<div class="form-group">
       	<label for="sel1">ORIGEN</label>
       	<select required="true" class="form-control" id="sel1">
@@ -50,7 +50,7 @@
 			</div>
 			<div class="form-group">
       	<label for="sel2">DESTINO</label>
-      	<select required="true" class="form-control" id="sel1">
+      	<select required="true" class="form-control" id="sel2">
         	<option></option>
         	<option>Arica</option>
         	<option>Iquique</option>
@@ -73,18 +73,48 @@
 </div>
 
 <div class="row">
-	<div class="col-xs-4 col-md-4">
-		<button type="button" class="btn btn-lg btn-warning" id="search">buscar</button>
+	<div class="col-xs-7 col-md-4">
+		<button type="button" class="btn btn-warning btn-lg btn-block " id="search">buscar</button>
 	</div>
 </div>
 
 <div class="row">
-	<div class="col-xs-4 col-md-4">
-		<h4>VEHICULO</h4>
-			<h6>seleccione</h6>
+	<div class="col-xs-7 col-md-4" id="carro">
+		<h4>VEHÍCULO</h4>
+		<h6>seleccione</h6>
+		<div class="radio">
+  			<label><input type="radio" name="optradio" required="true"></label>
+  			<img src="docs/moto.jpg" alt="" width="60" height="50">
+  			<h4>Moto</h4>
+  			<span>máximo 2 pasajeros</span>
+		</div>
+		<div class="radio">
+  		<label><input type="radio" name="optradio" required="true"></label>
+  			<img src="docs/auto.jpg" alt="" width="60" height="50">
+  			<h4>Automóvil</h4>
+  			<span>máximo 5 pasajeros</span>
+		</div>
+		<div class="radio">
+  		<label><input type="radio" name="optradio" required="true"></label>
+  			<img src="docs/van.jpg" alt="" width="60" height="50">
+  			<h4>Minivan</h4>
+  			<span>máximo 10 pasajeros</span>
+		</div>
+		<div class="radio">
+  		<label><input type="radio" name="optradio" required="true"></label>
+  			<img src="docs/camion.jpg" alt="" width="60" height="50">
+  			<h4>Camión</h4>
+  			<span>máximo 3 pasajeros</span>
+		</div>
+			<h4 class="cantidad">Cantidad de pasajeros</h4>
+			<label><input type="text"></label>
 	</div>
 </div>	
-
+<div class="row">
+	<div class="col-xs-7 col-md-4">
+		<button type="button" class="btn btn-warning btn-lg btn-block " id="search">compartir carro!</button>
+	</div>
+</div>
 
 
 
@@ -92,7 +122,7 @@
 </div><!--fin container con zindex-->
 
 
-
+<!---->
 
 
 

@@ -31,23 +31,20 @@
   z-index: 100;
   position: relative; }
 
-#ruta {
+#ruta, #carro {
   border: 1px solid #FEFDF7;
   border-radius: 7px;
   background-color: #FEFDF7;
   padding: 15px; }
 
-#search {
+#search, #search2 {
   width: 108%;
   margin-top: 5px;
   margin-left: -15px; }
 
 #carro {
-  border: 1px solid #FEFDF7;
-  background-color: #FEFDF7;
-  padding: 15px;
   margin-top: 5px;
-  border-radius: 7px; }
+  margin-bottom: 5px; }
 
 #sel1, #sel2 {
   border: 1px solid #FFC36C; }
@@ -71,4 +68,9 @@
 
 .cantidad {
   font-weight: bold;
+  display: inline-block;
+  padding: 5px; }
+
+.psj {
+  width: 40px;
   display: inline-block; }

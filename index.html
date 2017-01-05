@@ -31,43 +31,43 @@
 			<div class="form-group">
       	<label for="sel1">ORIGEN</label>
       	<select required="true" class="form-control" id="sel1">
-        	<option>Seleccione</option>
-        	<option>Arica</option>
-        	<option>Iquique</option>
-        	<option>Antofagasta</option>
-        	<option>Calama</option>
-        	<option>La Serena</option>
-        	<option>Valparaiso</option>
-        	<option>Santiago</option>
-        	<option>Rancagua</option>
-        	<option>Talca</option>
-        	<option>Concepción</option>
-        	<option>Temuco</option>
-        	<option>Valdivia</option>
-        	<option>Puerto Montt</option>
-        	<option>Coyhaique</option>
-        	<option>Punta Arenas</option>
+        	<option value="">Seleccione</option>
+        	<option value="0">Arica</option>
+        	<option value="1">Iquique</option>
+        	<option value="2">Antofagasta</option>
+        	<option value="3">Calama</option>
+        	<option value="4">La Serena</option>
+        	<option value="5">Valparaiso</option>
+        	<option value="6">Santiago</option>
+        	<option value="7"> Rancagua</option>
+        	<option value="8">Talca</option>
+        	<option value="9">Concepción</option>
+        	<option value="10">Temuco</option>
+        	<option value="11">Valdivia</option>
+        	<option value="12">Puerto Montt</option>
+        	<option value="13">Coyhaique</option>
+        	<option value="14">Punta Arenas</option>
       	</select>
 			</div>
 			<div class="form-group">
       	<label for="sel2">DESTINO</label>
       	<select required="true" class="form-control" id="sel2">
-        	<option>Seleccione</option>
-        	<option>Arica</option>
-        	<option>Iquique</option>
-        	<option>Antofagasta</option>
-        	<option>Calama</option>
-        	<option>La Serena</option>
-        	<option>Valparaiso</option>
-        	<option>Santiago</option>
-        	<option>Rancagua</option>
-        	<option>Talca</option>
-        	<option>Concepción</option>
-        	<option>Temuco</option>
-        	<option>Valdivia</option>
-        	<option>Puerto Montt</option>
-        	<option>Coyhaique</option>
-        	<option>Punta Arenas</option>
+        	<option value="">Seleccione</option>
+        	<option value="0">Arica</option>
+        	<option value="1">Iquique</option>
+        	<option value="2">Antofagasta</option>
+        	<option value="3">Calama</option>
+        	<option value="4">La Serena</option>
+        	<option value="5">Valparaiso</option>
+        	<option value="6">Santiago</option>
+        	<option value="7">Rancagua</option>
+        	<option value="8">Talca</option>
+        	<option value="9">Concepción</option>
+        	<option value="10">Temuco</option>
+        	<option value="11">Valdivia</option>
+        	<option value="12">Puerto Montt</option>
+        	<option value="13">Coyhaique</option>
+        	<option value="14">Punta Arenas</option>
       	</select>
 			</div>
 	</div><!-- END DEL FORM GROUP ORIGEN DESTINO-->
@@ -108,12 +108,13 @@
   			<span>máximo 3 pasajeros</span>
 		</div>
 			<h4 class="cantidad">Cantidad de pasajeros</h4>
-			<label><input type="text" class="psj"></label>
+			<label><input type="text" class="psj" id="psj"></label>
+      <span id="txt"></span>
 	</div>
 </div>	
 <div class="row">
 	<div class="col-xs-7 col-md-4">
-		<button type="button" class="btn btn-warning btn-lg btn-block" id="search2">compartir carro!</button>
+		<button type="button" class="btn btn-warning btn-lg btn-block" id="search2" onclick="myFunction()">compartir carro!</button>
 	</div>
 </div>
 

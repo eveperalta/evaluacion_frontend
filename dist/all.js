@@ -93,6 +93,21 @@ $(document).ready(function() {
   }
   var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 });
+
+//validar cantidad de pasajeros
+function myFunction() {
+    var x, text;
+    var bool = true;
+    // obtener el valor del input field pasajeros
+    x = document.getElementById("psj").value;
+    // si el valor no es un numero, o es menor o mayor q 0
+    if (isNaN(x) || x < 1 || x > 10) {
+        text = "Indique cantidad";
+        bool = false
+    }else if{
+    
+    document.getElementById("txt").innerHTML = text;
+}
 function Moto(){
 	this.litrosGastados = function(distancia){
 		// retorna la cantidad de litros que gasta en una distancia

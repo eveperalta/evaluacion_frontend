@@ -95,6 +95,9 @@ function validarTransporte(){
 	if(validarCamion($(".camion"))== false){
 		return false
 	}
+	if(validarPasajeros($(".psj"))== false){
+		return false
+	}
 	return true
 };
 //funcion para el mensaje
@@ -159,19 +162,38 @@ function validarCamion(input){
 		mostrarMsj(mensaje, input);
 		return bool
 	};
+function validarPasajeros(input){
+	var mensaje = "";
+	var bool = true;
+	if($(".psj").val() == ""){
+		mensaje += "Campo Obligatorio "
+		bool = false
+	}else{
+		if($(".psj").val().length >10){
+			mensaje += "Máximo 10 pasajeros"
+			bool = false
+		}
+	}
+	$("#text").siblings().filter("span").remove();// NO FUNCIONA
+		mostrarMsj(mensaje, input);
+		return bool
+};
 
 $("#search2").on("click",function(e){
 	if(validarMoto()== true){
-		
+		console.log("ok")
 	}else{
 		if(validarAutmovil()==true){
-			document.getElementById("#myModal")
+		   console.log("ok")
 		}
 		if(validarVan()== true){
-			document.getElementById("#myModal")
+			console.log("ok")
 		}
 		if(validarCamion()== true){
-			document.getElementById("#myModal")
+			console.log("ok")
+		}
+		if(validarPasajeros()== true){
+			console.log("ok")
 		}
 	}
 });

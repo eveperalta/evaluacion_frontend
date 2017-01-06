@@ -58,7 +58,7 @@ directionsService.route(request, function(response, status) {
 //calcular valor del viaje
         var km = response.routes[0].legs[0].distance.text;
         var valor = parseInt(km.substring(0, km.indexOf(' ')));
-
+        
         	console.log(km, valor)
         $('.precioMoto').html('')
         $('.precioMoto').html(parseInt(valor/21*673))

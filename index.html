@@ -22,52 +22,52 @@
     </div>
   </div>
 </nav><!--end-navbar-->
- <div class="col-xs-12 col-md-12" id='map-canvas'></div>
+  <div class="col-xs-12 col-md-12" id='map-canvas'></div>
 
 <div class="container" id='container'>
 	
 	<div class="row">
 		<div class="col-xs-8 col-md-4" id="ruta">
-			<div class="form-group">
-      	<label for="sel1">ORIGEN</label>
-      	<select required="true" class="form-control" id="sel1">
+			<div class="form-group input-box">
+      	<label for="origen">ORIGEN</label>
+      	<select class="form-control" id="origen">
         	<option value="">Seleccione</option>
-        	<option value="0">Arica</option>
-        	<option value="1">Iquique</option>
-        	<option value="2">Antofagasta</option>
-        	<option value="3">Calama</option>
-        	<option value="4">La Serena</option>
-        	<option value="5">Valparaiso</option>
-        	<option value="6">Santiago</option>
-        	<option value="7"> Rancagua</option>
-        	<option value="8">Talca</option>
-        	<option value="9">Concepción</option>
-        	<option value="10">Temuco</option>
-        	<option value="11">Valdivia</option>
-        	<option value="12">Puerto Montt</option>
-        	<option value="13">Coyhaique</option>
-        	<option value="14">Punta Arenas</option>
+        	<option value="Arica">Arica</option>
+        	<option value="Iquique">Iquique</option>
+        	<option value="Antofagasta">Antofagasta</option>
+        	<option value="Calama">Calama</option>
+        	<option value="La Serena">La Serena</option>
+        	<option value="Valparaiso">Valparaiso</option>
+        	<option value="Santiago">Santiago</option>
+        	<option value="Rancagua"> Rancagua</option>
+        	<option value="Talca">Talca</option>
+        	<option value="Concepción">Concepción</option>
+        	<option value="Temuco">Temuco</option>
+        	<option value="Valdivia">Valdivia</option>
+        	<option value="Puerto Montt">Puerto Montt</option>
+        	<option value="Coyhaique">Coyhaique</option>
+        	<option value="Punta Arenas">Punta Arenas</option>
       	</select>
 			</div>
-			<div class="form-group">
-      	<label for="sel2">DESTINO</label>
-      	<select required="true" class="form-control" id="sel2">
+			<div class="form-group input-box">
+      	<label for="destino">DESTINO</label>
+      	<select class="form-control" id="destino">
         	<option value="">Seleccione</option>
-        	<option value="0">Arica</option>
-        	<option value="1">Iquique</option>
-        	<option value="2">Antofagasta</option>
-        	<option value="3">Calama</option>
-        	<option value="4">La Serena</option>
-        	<option value="5">Valparaiso</option>
-        	<option value="6">Santiago</option>
-        	<option value="7">Rancagua</option>
-        	<option value="8">Talca</option>
-        	<option value="9">Concepción</option>
-        	<option value="10">Temuco</option>
-        	<option value="11">Valdivia</option>
-        	<option value="12">Puerto Montt</option>
-        	<option value="13">Coyhaique</option>
-        	<option value="14">Punta Arenas</option>
+        	<option value="Arica">Arica</option>
+        	<option value="Iquique">Iquique</option>
+        	<option value="Antofagasta">Antofagasta</option>
+        	<option value="Calama"">Calama</option>
+        	<option value="La Serena">La Serena</option>
+        	<option value="Valparaiso">Valparaiso</option>
+        	<option value="Santiago">Santiago</option>
+        	<option value="Rancagua">Rancagua</option>
+        	<option value="Talca">Talca</option>
+        	<option value="Concepción">Concepción</option>
+        	<option value="Temuco">Temuco</option>
+        	<option value="Valdivia">Valdivia</option>
+        	<option value="Puerto Montt">Puerto Montt</option>
+        	<option value="Coyhaique">Coyhaique</option>
+        	<option value="Punta Arenas">Punta Arenas</option>
       	</select>
 			</div>
 	</div><!-- END DEL FORM GROUP ORIGEN DESTINO-->
@@ -80,50 +80,69 @@
 </div>
 
 <div class="row">
-	<div class="col-xs-8 col-md-4" id="carro">
+	<div class="col-xs-8 col-md-4 hidden" id="carro">
 		<h4>VEHÍCULO</h4>
 		<h6>seleccione</h6>
 		<div class="radio">
-  			<label><input type="radio" name="optradio" required="true"></label>
+  			<label><input type="radio" name="optradio" class="moto"></label>
   			<img src="docs/moto.jpg" class="img-responsive auto" alt="">
   			<h4>Moto</h4>
-  			<span>máximo 2 pasajeros</span>
+        <div class="precioMoto"></div>
+  			<span class="llenar">máximo 2 pasajeros</span>
 		</div>
 		<div class="radio">
-  		<label><input type="radio" name="optradio" required="true"></label>
+  		<label><input type="radio" name="optradio" class="automovil"></label>
   			<img src="docs/auto.jpg" alt="" class="img-responsive auto">
   			<h4>Automóvil</h4>
-  			<span>máximo 5 pasajeros</span>
+        <div class="precioAuto"></div>
+  			<span class="llenar">máximo 5 pasajeros</span>
 		</div>
 		<div class="radio">
-  		<label><input type="radio" name="optradio" required="true"></label>
+  		<label><input type="radio" name="optradio" class="van"></label>
   			<img src="docs/van.jpg" alt="" class="img-responsive auto">
   			<h4>Minivan</h4>
-  			<span>máximo 10 pasajeros</span>
+        <div class="precioVan"></div>
+  			<span class="llenar">máximo 10 pasajeros</span>
 		</div>
 		<div class="radio">
-  		<label><input type="radio" name="optradio" required="true"></label>
+  		<label><input type="radio" name="optradio" class="camion"></label>
   			<img src="docs/camion.jpg" alt="" class="img-responsive auto">
   			<h4>Camión</h4>
-  			<span>máximo 3 pasajeros</span>
+  			<div class="precioCamion"></div>
+        <span class="llenar">máximo 3 pasajeros</span> 
 		</div>
-			<h4 class="cantidad">Cantidad de pasajeros</h4>
+			<h4 class="cantidad ">Cantidad de pasajeros</h4>
 			<label><input type="text" class="psj" id="psj"></label>
       <span id="txt"></span>
 	</div>
 </div>	
 <div class="row">
-	<div class="col-xs-7 col-md-4">
-		<button type="button" class="btn btn-warning btn-lg btn-block" id="search2" onclick="myFunction()">compartir carro!</button>
+	<div class="col-xs-8 col-md-4">
+		<button type="button" class="btn btn-warning btn-lg btn-block hidden" id="search2">compartir carro!</button>
 	</div>
 </div>
 
 
-
-
 </div><!--fin container con zindex-->
+<div class="container">
 
-
+  <!-- Modal -->
+  <div class="modal fade hidden" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <img src="docs/logo-peach.jpg" class="modal-title" width="200" height="100">
+        </div>
+        <div class="modal-body">
+          <img src="docs/moto.jpg" width="50" height="40" alt="">
+          <p>Costo por persona:</p>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
 <!---->
 
 
@@ -136,29 +155,10 @@
 
 
     
-	<!--<div id="home-sec">   
-		<div class="container">
-		</div>
-	</div><!--END HOME SECTION-->  
-	<!--<section id="info"  >
-		<div class="container">
-		</div>
-	</section><!--END ABOUT SECTION-->
-	<!--<section id="calculator" >
-		<div class="container">
-		</div>
-	</section><!--END PROJECT SECTION-->
 	
-
-
-
-
-	<!--<div id="footer">
-		2014 www.yourdomain.com | All Right Reserved  
-	</div><!-- END FOOTER SECTION -->
 </body>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyDjhLZdzD1Knb8c128oNAJ8cwO6lqYieu8"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyDjhLZdzD1Knb8c128oNAJ8cwO6lqYieu8"></script>
 <script src="src/js/custom.js"></script>
 </html>

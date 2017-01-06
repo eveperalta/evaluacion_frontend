@@ -16,7 +16,7 @@
 .info {
   width: 200px;
   position: relative;
-  left: 280px;
+  left: 285px;
   top: 10px; }
 
 #map-canvas {
@@ -37,7 +37,7 @@
   border-radius: 7px;
   background-color: #FEFDF7;
   padding: 15px;
-  margin-top: -5px; }
+  margin-top: -10px; }
 
 #search, #search2 {
   width: 108%;
@@ -46,9 +46,12 @@
 
 #carro {
   margin-top: 3px;
-  height: 390px; }
+  height: auto; }
   #carro h4 {
-    font-weight: bold; }
+    font-weight: bold;
+    margin-top: -7px; }
+  #carro h6 {
+    margin-top: -5px; }
 
 #sel1, #sel2, .psj {
   border: 1px solid #FFC36C; }
@@ -61,8 +64,6 @@
     position: relative; }
   .radio h4 {
     display: inline-block;
-    position: relative;
-    left: 5px;
     font-weight: bold; }
   .radio span {
     display: block;
@@ -82,3 +83,43 @@
 .psj {
   width: 40px;
   display: inline-block; }
+
+.input-box {
+  position: relative; }
+
+.input-box span {
+  display: block;
+  background-color: rgba(51, 51, 51, 0.8);
+  padding: 5px;
+  position: absolute;
+  left: 105%;
+  top: 25px;
+  width: 300px;
+  color: white; }
+
+.input-box span:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 10px solid rgba(51, 51, 51, 0.8);
+  border-bottom: 5px solid transparent;
+  position: absolute;
+  right: 100%;
+  top: 10px; }
+
+.precioMoto, .precioAuto, .precioVan, .precioCamion {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFC36C;
+  display: inline-block;
+  margin-left: 68px; }
+
+.precioAuto {
+  margin-left: 20px; }
+
+.precioVan {
+  margin-left: 40px; }
+
+.precioCamion {
+  margin-left: 40px; }

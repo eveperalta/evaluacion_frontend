@@ -85,16 +85,45 @@ $(document).ready(function(){
 	 $('[data-toggle="tooltip"]').tooltip(); 
 });
 
-$(document).ready(function() {
- var mapOptions = {
-    zoom: 12,
-    center: new google.maps.LatLng(-33.4375545, -70.65049),
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  }
-  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+/*-------------------------------------------------------------------
+--------------------------------------------------------------------*/
+
+//funcion validar formularios
+function validarCampos(){
+if(validarSelect($(".form-control"))==false){
+	return false
+}
+return true
+};
+
+
+function validarSelect(input){
+	var mensaje = "";
+	var bool = true;
+	if($("select").val()== ""){
+		var span_msj = $("<span>" + "Selecciona una ruta" + "</span>");
+		$("select").parent().append(span_msj);
+		bool = false
+	}
+	$(input).siblings().filter("span").remove();// NO FUNCIONA
+		return bool
+};
+$("#search").on("click",function(e){
+	e.preventDefault()
+	if(validarSelect() == true){
+	$("#carro").removeClass("hidden");	
+	}
 });
 
-//validar cantidad de pasajeros
+
+
+
+
+
+
+
+/*validar cantidad de pasajeros
+
 function myFunction() {
     var x, text;
     var bool = true;
@@ -104,10 +133,24 @@ function myFunction() {
     if (isNaN(x) || x < 1 || x > 10) {
         text = "Indique cantidad";
         bool = false
-    }else if{
-    
+    } 
     document.getElementById("txt").innerHTML = text;
-}
+}*/
+var directionsDisplay = new google.maps.DirectionsRenderer();
+var directionsService = new google.maps.DirectionsService();
+
+
+$(document).ready(function() {
+ var mapOptions = {
+    zoom: 12,
+    center: new google.maps.LatLng(-33.437411, -70.650146),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+});
+
+
 function Moto(){
 	this.litrosGastados = function(distancia){
 		// retorna la cantidad de litros que gasta en una distancia

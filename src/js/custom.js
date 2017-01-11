@@ -96,7 +96,7 @@ function mostrarMsj(mensaje, input){
 function validarVehiculo(input){
 	var mensaje = "";
 	var bool = true;
-	if($("input[type='radio']").is(":checked")){
+	if($("input[name='vehicle']:radio").is(":checked")){
 	   		return true
 	   		console.log("OK")
 	}else{
@@ -126,10 +126,8 @@ function validarPasajeros(input){
 };
 
 $("#search2").on("click",function(e){
-
-
 	if(validarVehiculo() == true){
-		$("#modal").removeClass("hidden");
+		$("#modal").toggle;
 	}else{
 		alert("Complete los datos");
 		}

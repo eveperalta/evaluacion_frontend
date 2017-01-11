@@ -82,24 +82,7 @@ directionsService.route(request, function(response, status) {
 
 /*-------------------------------------------------------------------
 --------------------------------------------------------------------*/
-function validarTransporte(){
-	if(validarMoto($(".moto"))== false){
-		return false
-	}
-	if(validarAutmovil($(".automovil"))== false){
-		return false
-	}
-	if(validarVan($(".van"))== false){
-		return false
-	}
-	if(validarCamion($(".camion"))== false){
-		return false
-	}
-	if(validarPasajeros($(".psj"))== false){
-		return false
-	}
-	return true
-};
+
 //funcion para el mensaje
 function mostrarMsj(mensaje, input){
 	if(mensaje == ""){
@@ -113,8 +96,9 @@ function mostrarMsj(mensaje, input){
 function validarVehiculo(input){
 	var mensaje = "";
 	var bool = true;
-	if($("input[name='vehicle']:radio").is(":checked")){
+	if($("input[type='radio']").is(":checked")){
 	   		return true
+	   		console.log("OK")
 	}else{
 		mensaje += "Selecciona un Vehiculo" 
 			bool = false
@@ -142,11 +126,14 @@ function validarPasajeros(input){
 };
 
 $("#search2").on("click",function(e){
-	if(validarVehiculo() && validarPasajeros() == true){
-		$("#modal").toggleClass('show')
+
+
+	if(validarVehiculo() == true){
+		$("#modal").removeClass("hidden");
 	}else{
-		alert("try again");
+		alert("Complete los datos");
 		}
+
 });
 
 

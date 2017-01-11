@@ -110,11 +110,11 @@ function mostrarMsj(mensaje, input){
 }
 
 //funciones para validar los input radio
-function validarMoto(input){
+function validarVehiculo(input){
 	var mensaje = "";
 	var bool = true;
-	if($(".moto").is(":checked")){
-	   	alert($('precioMoto'))
+	if($("input[name='vehicle']:radio").is(":checked")){
+	   		return true
 	}else{
 		mensaje += "Selecciona un Vehiculo" 
 			bool = false
@@ -123,45 +123,7 @@ function validarMoto(input){
 		mostrarMsj(mensaje, input);
 		return bool
 	};
-function validarAutmovil(input){
-	var mensaje = "";
-	var bool = true;
-	if($(".automovil").is(":checked")){
-	   alert($('precioAuto'))
-	}else{
-		mensaje += "Selecciona un Vehiculo"
-			bool = false
-		};
-	$(".radio").siblings().filter("span").remove();// NO FUNCIONA
-		mostrarMsj(mensaje, input);
-		return bool
-	};	
-function validarVan(input){
-	var mensaje = "";
-	var bool = true;
-	if($(".van").is(":checked")){
-	   alert($('precioVan'))
-	}else{
-		mensaje += "Selecciona un Vehiculo" 
-			bool = false
-		};
-	$(".radio").siblings().filter("span").remove();// NO FUNCIONA
-		mostrarMsj(mensaje, input);
-		return bool
-	};	
-function validarCamion(input){
-	var mensaje = "";
-	var bool = true;
-	if($(".camion").is(":checked")){
-	   alert($('precioCamion'))
-	}else{
-		mensaje += "Selecciona un Vehiculo" 
-			bool = false
-		};
-	$(".radio").siblings().filter("span").remove();// NO FUNCIONA
-		mostrarMsj(mensaje, input);
-		return bool
-	};
+
 function validarPasajeros(input){
 	var mensaje = "";
 	var bool = true;
@@ -180,22 +142,11 @@ function validarPasajeros(input){
 };
 
 $("#search2").on("click",function(e){
-	if(validarMoto()== true){
-		console.log("ok")
+	if(validarVehiculo() && validarPasajeros() == true){
+		$("#modal").toggleClass('show')
 	}else{
-		if(validarAutmovil()==true){
-		   console.log("ok")
+		alert("try again");
 		}
-		if(validarVan()== true){
-			console.log("ok")
-		}
-		if(validarCamion()== true){
-			console.log("ok")
-		}
-		if(validarPasajeros()== true){
-			console.log("ok")
-		}
-	}
 });
 
 
